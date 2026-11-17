@@ -1,0 +1,18 @@
+﻿# Pilot 001 Evidence Return
+
+evidence_return_id: EV-FM001-PILOT-DOCS
+source_object_id: TASK-FM001-PILOT-001
+artifact_refs:
+  - bot-cluster-replication/pilot/TASK-FM001.yaml
+  - bot-cluster-replication/pilot/VERIFICATION-REPORT-FM001.md
+  - bot-cluster-replication/pilot/READBACK-FM001.md
+read_status: readable
+observed_result: 本地控制面样例的输入、输出、验证和回退字段可回读；未调用在线 Bot 或外部账号。
+validation_status: passed
+returned_at: '2026-11-17T16:20:00+08:00'
+source_refs:
+  - bot-cluster-replication/FEATURE_MAP.md#FM-001
+  - bot-cluster-replication/VERIFICATION.md
+limitations:
+  - 这是控制面试运行，不代表真实 Bot 已完成同一任务。
+  - 未产生真实站点、外部账号或生产环境证据。

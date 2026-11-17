@@ -1,0 +1,32 @@
+﻿# Pilot 001 Task
+
+task_id: TASK-FM001-PILOT-001
+project_id: PROJECT-BOT-CLUSTER-REPLICATION
+agent_role_ref: coordinator
+# 本地试运行不绑定真实个人 owner
+task_owner_ref: null
+input_refs:
+  - bot-cluster-replication/FEATURE_MAP.md#FM-001
+  - bot-cluster-replication/protocols/task-dispatch.schema.yaml
+  - bot-cluster-replication/protocols/evidence-return.schema.yaml
+acceptance:
+  - 任务字段完整，可被独立读取
+  - 输出、证据、验证和回退状态可以互相回链
+  - 缺资料或证据不足时不得标记为 passed
+  - 不修改在线 Bot 配置，不执行外部高风险动作
+depends_on: []
+risk_level: low
+human_confirmation_required: false
+output_refs:
+  - bot-cluster-replication/pilot/EVIDENCE-RETURN-FM001.yaml
+  - bot-cluster-replication/pilot/VERIFICATION-REPORT-FM001.md
+  - bot-cluster-replication/pilot/READBACK-FM001.md
+evidence_return_ids:
+  - EV-FM001-PILOT-DOCS
+blocked_reason: null
+retry_count: 0
+state_key: TASK_ACCEPTANCE_PENDING
+gate_ids:
+  - KG-01
+  - KG-02
+execution_mode: local_control_plane_simulation
