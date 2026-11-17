@@ -1,0 +1,25 @@
+# M01 Evidence Return
+
+evidence_return_id: EV-M01-SOURCE-INTAKE-001
+source_object_id: TASK-M01-SOURCE-INTAKE-001
+artifact_refs:
+  - bot-cluster-replication/pilot/TASK-M01-SOURCE-INTAKE-001.yaml
+  - bot-cluster-replication/pilot/VERIFICATION-REPORT-M01-SOURCE-INTAKE-001.md
+  - bot-cluster-replication/pilot/READBACK-M01-SOURCE-INTAKE-001.md
+source_id: pstack-official-guide-01-setup-20261117
+source_type: official-github-markdown
+source_url: "https://github.com/cursor/plugins/blob/main/pstack/docs/guide/01-setup.md"
+stable_source_url: "https://raw.githubusercontent.com/cursor/plugins/e1cc03121a0e71129a4fb730d7c5528a0a3e43c8/pstack/docs/guide/01-setup.md"
+read_status: readable
+observed_result: "专业 Bot 完成了官方 setup 文档读取和登记；总控随后按固定提交重新读取正文，确认安装、模型规则、验证 skill、新会话和首个任务等关键事实均可回链。"
+validation_status: pending
+returned_at: '2026-11-17T16:41:01+08:00'
+source_refs:
+  - "stable raw lines 0-13: https://raw.githubusercontent.com/cursor/plugins/e1cc03121a0e71129a4fb730d7c5528a0a3e43c8/pstack/docs/guide/01-setup.md"
+  - "stable raw lines 14-26: https://raw.githubusercontent.com/cursor/plugins/e1cc03121a0e71129a4fb730d7c5528a0a3e43c8/pstack/docs/guide/01-setup.md"
+  - "stable raw lines 27-34: https://raw.githubusercontent.com/cursor/plugins/e1cc03121a0e71129a4fb730d7c5528a0a3e43c8/pstack/docs/guide/01-setup.md"
+  - "stable raw lines 35-51: https://raw.githubusercontent.com/cursor/plugins/e1cc03121a0e71129a4fb730d7c5528a0a3e43c8/pstack/docs/guide/01-setup.md"
+limitations:
+  - 这是资料读取和登记，不代表已在 Cursor 或 Claude Code 中执行安装或配置。
+  - 当前没有独立 QA Bot 的复现报告，因此 validation_status 仍为 pending。
+  - 模型名称、默认值和本地 verify skill 状态尚未在本机环境验证。

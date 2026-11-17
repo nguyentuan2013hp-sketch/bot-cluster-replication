@@ -1,0 +1,33 @@
+# M01：资料入库与来源登记
+
+task_id: TASK-M01-SOURCE-INTAKE-001
+project_id: PROJECT-BOT-CLUSTER-REPLICATION
+agent_role_ref: knowledge-manager
+task_owner_ref: bot:e3ca6be5-76c8-402b-a4f6-4461cecf25f8
+input_refs:
+  - "https://github.com/cursor/plugins/blob/main/pstack/docs/guide/01-setup.md"
+  - "https://raw.githubusercontent.com/cursor/plugins/e1cc03121a0e71129a4fb730d7c5528a0a3e43c8/pstack/docs/guide/01-setup.md"
+  - bot-cluster-replication/protocols/task-dispatch.schema.yaml
+  - bot-cluster-replication/protocols/evidence-return.schema.yaml
+acceptance:
+  - 来源正文可回读，并记录读取时间和稳定版本引用
+  - 事实、推断、待确认分开记录
+  - 至少三条证据定位能够回链到正文
+  - 读取失败或权限不足时进入 BLOCKED
+  - 只有来源读取和登记完成，不把 Bot 自述直接标记为最终通过
+depends_on: []
+risk_level: low
+human_confirmation_required: false
+output_refs:
+  - bot-cluster-replication/pilot/EVIDENCE-RETURN-M01-SOURCE-INTAKE-001.yaml
+  - bot-cluster-replication/pilot/VERIFICATION-REPORT-M01-SOURCE-INTAKE-001.md
+  - bot-cluster-replication/pilot/READBACK-M01-SOURCE-INTAKE-001.md
+evidence_return_ids:
+  - EV-M01-SOURCE-INTAKE-001
+blocked_reason: null
+retry_count: 0
+state_key: TASK_QA_PENDING
+gate_ids:
+  - KG-01
+  - KG-02
+execution_mode: real_source_read_with_control_plane_record
