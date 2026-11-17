@@ -1,0 +1,13 @@
+# authorization.schema.yaml
+
+authorization_id: string
+target_type: string
+target_id: string
+action_type: string
+scope: array
+status: pending|approved|denied|expired|revoked
+approved_by: string|null
+reason: string
+requested_at: string
+approved_at: string|null
+expires_at: string|null

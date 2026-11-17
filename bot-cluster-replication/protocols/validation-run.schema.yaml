@@ -1,0 +1,13 @@
+# validation-run.schema.yaml
+
+validation_run_id: string
+target_type: string
+target_id: string
+gate_id: KG-03_VALIDATION
+rule_version: string
+evidence_ids: array
+result: pending|passed|failed
+issues: array
+started_at: string
+finished_at: string
+actor_ref: string

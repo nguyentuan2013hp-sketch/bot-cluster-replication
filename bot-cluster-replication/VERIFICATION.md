@@ -30,3 +30,21 @@ verified_at: ''
 - QA 通过不等于 Kernel Validation 通过。
 - Bot 自述完成不等于可验证完成。
 - 缺来源时不得补猜流量、价格、用户数据或平台状态。
+
+## v0.2 控制面行为检查
+
+本地实现的最低检查由 `tests/test_control_plane.py` 覆盖：
+
+- 正常路径：任务经过执行、Evidence、独立核验和 KG-03 后才可进入 `TASK_PASSED`；
+- 缺资料/权限路径：缺 Evidence 或高风险 Authorization 时保持阻塞；
+- 证据不足路径：Evidence 为 `pending` 时 Validation 只能返回 `pending`；
+- 状态安全：非法流转被拒绝，拒绝时任务状态不被部分修改；
+- 状态分离：业务完成、QA 和 Kernel Validation 在 Readback 中保持独立；
+- 事实源：状态文件中没有持久化的第二份 `readback` 状态。
+
+运行命令：
+
+```powershell
+python -m unittest discover -s tests -v
+python -m control_plane.cli demo
+```

@@ -1,0 +1,12 @@
+# activity.schema.yaml
+
+activity_id: string
+event_type: string
+target_type: string
+target_id: string
+before_state: string|null
+after_state: string|null
+reason: string
+actor_id: string|null
+request_id: string
+occurred_at: string
