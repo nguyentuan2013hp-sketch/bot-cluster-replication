@@ -23,7 +23,7 @@
 
 ## M01：资料入库与来源登记
 
-M01 使用 pstack 官方 setup 文档作为真实资料，已完成专业 Bot 的来源读取与登记，并由总控按固定提交核对正文和证据行号。
+M01 使用 pstack 官方 setup 文档作为真实资料，由当前群组的 Fin 直接读取并按固定提交核对正文和证据行号。
 
 - 任务卡：`TASK-M01-SOURCE-INTAKE-001.yaml`
 - 证据回传：`EVIDENCE-RETURN-M01-SOURCE-INTAKE-001.yaml`
@@ -31,4 +31,4 @@ M01 使用 pstack 官方 setup 文档作为真实资料，已完成专业 Bot �
 - 状态回读：`READBACK-M01-SOURCE-INTAKE-001.md`
 - 可重复检查：`scripts/validate-m01-source.ps1`
 
-当前状态：来源证据可读，证据状态通过；独立 QA 尚未运行，因此任务整体仍保持 `pending`，没有推进为业务通过。
+当前状态：来源证据可读，证据状态通过；独立 QA 尚未运行，因此任务整体仍保持 `pending`，没有推进为业务通过。本轮没有调用其他群组 Bot。

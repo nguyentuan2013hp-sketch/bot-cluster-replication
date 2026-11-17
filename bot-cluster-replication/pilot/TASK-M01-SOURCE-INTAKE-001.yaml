@@ -2,8 +2,8 @@
 
 task_id: TASK-M01-SOURCE-INTAKE-001
 project_id: PROJECT-BOT-CLUSTER-REPLICATION
-agent_role_ref: knowledge-manager
-task_owner_ref: bot:e3ca6be5-76c8-402b-a4f6-4461cecf25f8
+agent_role_ref: coordinator
+task_owner_ref: fin:self
 input_refs:
   - "https://github.com/cursor/plugins/blob/main/pstack/docs/guide/01-setup.md"
   - "https://raw.githubusercontent.com/cursor/plugins/e1cc03121a0e71129a4fb730d7c5528a0a3e43c8/pstack/docs/guide/01-setup.md"
@@ -30,4 +30,4 @@ state_key: TASK_QA_PENDING
 gate_ids:
   - KG-01
   - KG-02
-execution_mode: real_source_read_with_control_plane_record
+execution_mode: current_group_direct_source_read
