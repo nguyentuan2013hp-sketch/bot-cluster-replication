@@ -1,0 +1,9 @@
+﻿# evidence-return.schema.yaml
+
+evidence_return_id: string
+source_object_id: string
+artifact_refs: array
+read_status: readable|partial|unreadable
+observed_result: string
+validation_status: pending|passed|failed
+returned_at: string

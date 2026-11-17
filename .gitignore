@@ -1,0 +1,23 @@
+﻿# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# temporary output
+*.log
+.tmp/
+
+# OpenMausBot injected skill mirrors
+.agents/
+.claude/
+.grok/

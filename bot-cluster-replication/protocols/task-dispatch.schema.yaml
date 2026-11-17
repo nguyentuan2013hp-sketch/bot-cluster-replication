@@ -1,0 +1,15 @@
+﻿# task-dispatch.schema.yaml
+
+task_id: string
+project_id: string
+agent_role_ref: string
+task_owner_ref: string|null
+input_refs: array
+acceptance: array
+depends_on: array
+risk_level: low|medium|high
+human_confirmation_required: boolean
+output_refs: array
+evidence_return_ids: array
+blocked_reason: string|null
+retry_count: integer
